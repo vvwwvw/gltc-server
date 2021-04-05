@@ -1,0 +1,11 @@
+version: '3'
+services:
+        nginx:
+                container_name: nginx
+                build: ./nginx
+                image: gltc-server/nginx
+                restart: always
+                ports:
+                        - "8000:8000"
+                volumes:
+                        - ./serve
